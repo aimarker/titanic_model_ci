@@ -2,7 +2,8 @@
 
 install:
 	python -m pip install --upgrade pip &&\
-		pip install -r requirements/requirements.txt
+		pip install -r requirements/requirements.txt &&\
+		pip install -r requirements/test_requirements.txt
 
 train:
 	python titanic_model/train_pipeline.py
