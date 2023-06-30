@@ -6,10 +6,10 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 # Package meta-data.
-NAME = 'titanic_model'
+NAME = "titanic_model"
 DESCRIPTION = "Titanic dataset classification model package "
-EMAIL = "------"
-AUTHOR = "----------"
+EMAIL = "asbgecu2050@gmail.com"
+AUTHOR = "Abhishek Suman"
 REQUIRES_PYTHON = ">=3.7.0"
 
 
@@ -24,17 +24,18 @@ long_description = DESCRIPTION
 about = {}
 ROOT_DIR = Path(__file__).resolve().parent
 print(ROOT_DIR)
-REQUIREMENTS_DIR = ROOT_DIR / 'requirements'
-PACKAGE_DIR = ROOT_DIR / 'titanic_model'
-with open(PACKAGE_DIR / "VERSION") as f:
+REQUIREMENTS_DIR = ROOT_DIR / "requirements"
+PACKAGE_DIR = ROOT_DIR / "titanic_model"
+with open(PACKAGE_DIR / "VERSION", encoding="UTF-8") as f:
     _version = f.read().strip()
     about["__version__"] = _version
 
 
 # What packages are required for this module to be executed?
 def list_reqs(fname="requirements.txt"):
-    with open(REQUIREMENTS_DIR / fname) as fd:
+    with open(REQUIREMENTS_DIR / fname, encoding="UTF-8") as fd:
         return fd.read().splitlines()
+
 
 # Where the magic happens:
 setup(
